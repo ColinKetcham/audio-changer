@@ -1,8 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import * as Tone from 'tone';
+
+import Microphone from './Microphone';
 
 function App() {
-  return <button>play</button>;
+  return (
+    <>
+      <Microphone />
+    </>
+  );
 }
 
 export default App;

@@ -70,7 +70,14 @@ function Player({ music }) {
 
   return (
     <>
-      <div>
+      <div
+        style={{
+          padding: '2rem',
+          display: 'flex',
+          flexWrap: 'wrap',
+          justifyContent: 'center',
+        }}
+      >
         <button onClick={handleClick}>play</button>
         <button onClick={handleClick4}>play 0.9</button>
         <button onClick={handleClick2}>play 0.75</button>

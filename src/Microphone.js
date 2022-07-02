@@ -70,12 +70,23 @@ const Microphone = () => {
   }, [audioUrl]);
 
   return (
-    <>
-      <button onClick={startRecording}>{recording}</button>
-      <button onClick={stopRecording}>Stop Recording</button>
-      <button onClick={playRecording}>Play Recording</button>
+    <div
+      style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+    >
+      <div
+        style={{
+          padding: '2rem',
+          display: 'flex',
+          flexWrap: 'wrap',
+          justifyContent: 'center',
+        }}
+      >
+        <button onClick={startRecording}>{recording}</button>
+        <button onClick={stopRecording}>Stop Recording</button>
+        <button onClick={playRecording}>Play Recording</button>
+      </div>
       <Player music={audioUrl} />
-    </>
+    </div>
   );
 };
 

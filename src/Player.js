@@ -53,6 +53,16 @@ function Player({ music }) {
     await player.start();
     console.log('playing');
   };
+  const handleClick5 = async () => {
+    // player.stop();
+    // console.log('clicked');
+    await Tone.start();
+    player.playbackRate = 0.5;
+    player.disconnect();
+    player.connect(normalShift);
+    await player.start();
+    console.log('playing');
+  };
   const handleClick4 = async () => {
     // player.stop();
     // console.log('clicked');
@@ -82,6 +92,7 @@ function Player({ music }) {
         <button onClick={handleClick4}>play 0.9</button>
         <button onClick={handleClick2}>play 0.75</button>
         <button onClick={handleClick3}>play 0.5</button>
+        <button onClick={handleClick5}>play 0.5 (down octave)</button>
         <button onClick={handleStop}>stop</button>
       </div>
     </>
